@@ -13,7 +13,7 @@ BirdGen is a [BotHub.Studio](https://bothub.studio) project. [Get a free account
 * *Bird API*
 * *Sentiment API*
 
-If you're interested in private DeepNatural APIs, contact anson@deepnatural.io to get the free-tier API key.
+*If you're interested in private DeepNatural APIs, contact anson@deepnatural.io to get the free-tier API key.*
 
 ### Prerequisites
 
