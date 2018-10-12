@@ -20,15 +20,23 @@ class Bot(BaseBot):
 
     @channel()
     def default_handler(self, event, context):
+        def image_sender(event, context, url):
+            self.send_message(url)
+        self._handler(event, context, image_sender)
+
+    @channel('telegram')
+    def telegram_handler(self, event, context):
+        def image_sender(event, context, url):
+            telegram.send_photo(event, context, url)
+        self._handler(event, context, image_sender)
+
+    def _handler(self, event, context, image_sender):
         intent = self.detect_intent(event, context)
         if intent == 'intent.bird.gen':
             self.send_message(template('one_sec'))
             url = self.gen_bird_pic(event['content'])
             self.send_message(template('here_you_go'))
-            if event['channel'] == 'telegram':
-                telegram.send_photo(event, context, url)
-            else:
-                self.send_message(url)
+            image_sender(event, context, url)
         else:
             senti_score = self.sentiment_score(event['content'])
             emoji = senti_emoji(senti_score)

@@ -4,6 +4,8 @@ BirdGen Bot - Describe a bird in your mind! 🐥🕊🦆
 
 [![Demo Video on Youtube](https://user-images.githubusercontent.com/35123241/46577927-e0947e80-ca2c-11e8-82a2-2529b5a46373.png)](http://www.youtube.com/watch?v=k8LdmURnlXk "BirdGen Telegram Bot - Describe a bird in your mind!")
 
+* Try BirdGen on Telegram - https://telegram.me/BirdGenBot
+
 
 ## Getting Started
 
